@@ -1,0 +1,1 @@
+LOAD DATA INFILE '/home/sadikoz/exhibitAinput.csv'  INTO TABLE exhibitAinput  FIELDS TERMINATED BY '\t'  ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 ROWS (PLAY_ID,SONG_ID,CLIENT_ID,@PLAY_TS) set PLAY_TS = STR_TO_DATE(@PLAY_TS,'%d/%m/%Y %H:%i:%S') ;
